@@ -1,15 +1,14 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:hecta/core/di/injection.dart';
+import 'package:hecta/core/shared/presentation/state_renderer/base_cubit_wrapper.dart';
+import 'package:hecta/features/auth/presentation/cubit/login_cubit.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
-
-  @override
-  State<LoginScreen> createState() => _LoginScreenState();
-}
-
-class _LoginScreenState extends State<LoginScreen> {
-  @override
-  Widget build(BuildContext context) {
-    return const SizedBox.shrink(); // Placeholder for the actual UI implementation
-  }
+@RoutePage()
+class LoginScreen extends BaseCubitWrapper<LoginCubit> {
+  LoginScreen({super.key})
+    : super(
+        createCubit: (ctx) => getIt<LoginCubit>(),
+        child: SizedBox.shrink(),
+      );
 }

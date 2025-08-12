@@ -5,7 +5,7 @@ import 'package:hecta/core/networking/network_info/network_info.dart';
 import 'package:hecta/features/auth/data/datasources/remote/login_remote_data_source.dart';
 import 'package:hecta/features/auth/data/models/request/login_request.dart';
 import 'package:hecta/features/auth/data/datasources/service/login_service.dart';
-import 'package:hecta/features/auth/data/models/response/login_response.dart';
+import 'package:hecta/features/auth/data/models/response/login_response/login_response.dart';
 
 class LoginRemoteDataSourceImpl implements LoginRemoteDataSource {
   final LoginService loginService;

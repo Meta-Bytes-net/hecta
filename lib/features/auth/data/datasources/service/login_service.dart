@@ -1,9 +1,10 @@
 import 'package:dio/dio.dart';
+import 'package:hecta/features/auth/data/models/response/login_response/login_response.dart';
 import 'package:retrofit/dio.dart';
 import 'package:retrofit/error_logger.dart';
 import 'package:retrofit/http.dart';
 
-import '../../models/response/login_response.dart';
+
 
 part 'login_service.g.dart';
 

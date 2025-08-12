@@ -11,46 +11,46 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i2;
 import 'package:flutter/material.dart' as _i3;
-import 'package:hecta/features/auth/presentation/widgets/login_wrapper.dart'
+import 'package:hecta/features/auth/presentation/pages/login_screen.dart'
     as _i1;
 
 /// generated route for
-/// [_i1.LoginWrapper]
-class LoginWrapper extends _i2.PageRouteInfo<LoginWrapperArgs> {
-  LoginWrapper({_i3.Key? key, List<_i2.PageRouteInfo>? children})
+/// [_i1.LoginScreen]
+class LoginRoute extends _i2.PageRouteInfo<LoginRouteArgs> {
+  LoginRoute({_i3.Key? key, List<_i2.PageRouteInfo>? children})
     : super(
-        LoginWrapper.name,
-        args: LoginWrapperArgs(key: key),
+        LoginRoute.name,
+        args: LoginRouteArgs(key: key),
         initialChildren: children,
       );
 
-  static const String name = 'LoginWrapper';
+  static const String name = 'LoginRoute';
 
   static _i2.PageInfo page = _i2.PageInfo(
     name,
     builder: (data) {
-      final args = data.argsAs<LoginWrapperArgs>(
-        orElse: () => const LoginWrapperArgs(),
+      final args = data.argsAs<LoginRouteArgs>(
+        orElse: () => const LoginRouteArgs(),
       );
-      return _i2.WrappedRoute(child: _i1.LoginWrapper(key: args.key));
+      return _i2.WrappedRoute(child: _i1.LoginScreen(key: args.key));
     },
   );
 }
 
-class LoginWrapperArgs {
-  const LoginWrapperArgs({this.key});
+class LoginRouteArgs {
+  const LoginRouteArgs({this.key});
 
   final _i3.Key? key;
 
   @override
   String toString() {
-    return 'LoginWrapperArgs{key: $key}';
+    return 'LoginRouteArgs{key: $key}';
   }
 
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
-    if (other is! LoginWrapperArgs) return false;
+    if (other is! LoginRouteArgs) return false;
     return key == other.key;
   }
 
