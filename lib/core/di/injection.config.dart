@@ -12,6 +12,7 @@
 import 'package:get_it/get_it.dart' as _i174;
 import 'package:hecta/core/di/di_module.dart' as _i914;
 import 'package:hecta/core/networking/network_info/network_info.dart' as _i911;
+import 'package:hecta/core/routing/app_router.dart' as _i27;
 import 'package:injectable/injectable.dart' as _i526;
 
 extension GetItInjectableX on _i174.GetIt {
@@ -22,6 +23,7 @@ extension GetItInjectableX on _i174.GetIt {
   }) {
     final gh = _i526.GetItHelper(this, environment, environmentFilter);
     final dataModule = _$DataModule();
+    gh.singleton<_i27.AppRouter>(() => _i27.AppRouter());
     gh.lazySingleton<_i911.NetworkInfo>(() => dataModule.provideNetworkInfo());
     return this;
   }
