@@ -53,6 +53,9 @@ dependencies:
   cupertino_icons: ^1.0.8
   dart_mappable: ^4.6.0
   flutter_native_splash: ^2.4.6
+  carousel_slider: ^5.1.1
+  escape_parent_padding: ^1.0.4
+  smooth_page_indicator: ^1.2.1
 
 dev_dependencies:
   build_runner: ^2.5.4
