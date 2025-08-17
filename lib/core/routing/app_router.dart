@@ -21,6 +21,8 @@ final class AppRouter extends RootStackRouter {
       duration: Duration(milliseconds: 700),
     ),
 
+    AutoRoute(path: Routers.home, page: HomeRoute.page),
+
     AutoRoute(initial: true, path: Routers.splash, page: SplashRoute.page),
   ];
 }
@@ -29,6 +31,7 @@ final class Routers {
   Routers._();
 
   static const String login = '/login';
+  static const String home = '/home';
 
   static const String splash = '/splash';
 
