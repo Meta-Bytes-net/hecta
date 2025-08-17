@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:hecta/core/helpers/extensions/extensions.dart';
 import 'package:hecta/features/home/presentation/widgets/carousel_item.dart';
 import 'package:hecta/features/home/presentation/widgets/indicator_widget.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class HomeCarousel extends StatefulWidget {
   const HomeCarousel({super.key});
@@ -24,10 +23,10 @@ class _HomeCarouselState extends State<HomeCarousel> {
       spacing: 15,
       children: [
         EscapablePadding.lite(
-          height: context.height * 0.2,
+          height: context.screenHeight * 0.2,
           child: CarouselSlider(
             options: CarouselOptions(
-              height: context.height * 0.2,
+              height: context.screenHeight * 0.2,
               aspectRatio: 16 / 9,
               viewportFraction: .8,
               initialPage: 0,

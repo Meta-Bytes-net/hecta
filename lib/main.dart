@@ -4,7 +4,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hecta/core/di/injection.dart';
 import 'package:injectable/injectable.dart';
 
-
 import 'core/routing/app_router.dart';
 
 Future<void> main() async {
