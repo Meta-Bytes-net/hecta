@@ -52,3 +52,16 @@ extension StringExtension on String? {
 extension ListExtension<T> on List<T>? {
   bool isNullOrEmpty() => this == null || this!.isEmpty;
 }
+
+extension BuildContextExtension on BuildContext {
+  ThemeData get theme => Theme.of(this);
+
+  TextTheme get textTheme => theme.textTheme;
+
+  Size get size => MediaQuery.sizeOf(this);
+
+  double get screenWidth => size.width;
+
+  double get screenHeight => size.height;
+}
+

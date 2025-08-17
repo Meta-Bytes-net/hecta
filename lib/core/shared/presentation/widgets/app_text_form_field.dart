@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:hecta/core/theming/styles.dart';
 
-import '../../../theming/colors.dart';
+import '../../../theming/app_colors.dart';
 
 class AppTextFormField extends StatelessWidget {
   final EdgeInsetsGeometry? contentPadding;
@@ -44,7 +43,7 @@ class AppTextFormField extends StatelessWidget {
             focusedBorder ??
             OutlineInputBorder(
               borderSide: const BorderSide(
-                color: ColorsManager.mainBlue,
+                color: AppColors.mainBlue,
                 width: 1.3,
               ),
               borderRadius: BorderRadius.circular(16.0),
@@ -53,7 +52,7 @@ class AppTextFormField extends StatelessWidget {
             enabledBorder ??
             OutlineInputBorder(
               borderSide: const BorderSide(
-                color: ColorsManager.lighterGray,
+                // color: AppColors.lighterGray,
                 width: 1.3,
               ),
               borderRadius: BorderRadius.circular(16.0),
@@ -66,14 +65,14 @@ class AppTextFormField extends StatelessWidget {
           borderSide: const BorderSide(color: Colors.red, width: 1.3),
           borderRadius: BorderRadius.circular(16.0),
         ),
-        hintStyle: hintStyle ?? TextStyles.font14LightGrayRegular,
+        // hintStyle: hintStyle ?? TextStyles.font14LightGrayRegular,
         hintText: hintText,
         suffixIcon: suffixIcon,
-        fillColor: backgroundColor ?? ColorsManager.moreLightGray,
+        // fillColor: backgroundColor ?? AppColors.moreLightGray,
         filled: true,
       ),
       obscureText: isObscureText ?? false,
-      style: TextStyles.font14DarkBlueMedium,
+      // style: TextStyles.font14DarkBlueMedium,
       validator: (value) {
         return validator(value);
       },

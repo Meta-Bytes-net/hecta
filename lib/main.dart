@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hecta/core/di/injection.dart';
 import 'package:injectable/injectable.dart';
+
 import 'core/routing/app_router.dart';
 
 Future<void> main() async {
@@ -17,13 +19,21 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      routerConfig: appRouter.config(),
-      debugShowCheckedModeBanner: false,
-      title: 'Hecta',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      ),
+    return ScreenUtilInit(
+      designSize: const Size(360, 690),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      builder: (context, child) {
+        return MaterialApp.router(
+          routerConfig: appRouter.config(),
+          debugShowCheckedModeBanner: false,
+          title: 'Hecta',
+          theme: ThemeData(
+            colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+            useMaterial3: true,
+          ),
+        );
+      },
     );
   }
 }
