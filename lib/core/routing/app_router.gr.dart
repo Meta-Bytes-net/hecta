@@ -9,18 +9,20 @@
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:auto_route/auto_route.dart' as _i4;
-import 'package:flutter/material.dart' as _i5;
+import 'package:auto_route/auto_route.dart' as _i5;
+import 'package:flutter/material.dart' as _i6;
 import 'package:hecta/features/auth/presentation/pages/login_screen.dart'
     as _i2;
+import 'package:hecta/features/category_details/presentation/pages/category_details_screen.dart'
+    as _i4;
 import 'package:hecta/features/home/presentation/screens/home_screen.dart'
     as _i1;
-import 'package:hecta/features/splash/screens/splash_screen.dart' as _i3;
+import 'package:hecta/features/splash/splash_screen.dart' as _i3;
 
 /// generated route for
 /// [_i1.HomeScreen]
-class HomeRoute extends _i4.PageRouteInfo<HomeRouteArgs> {
-  HomeRoute({_i5.Key? key, List<_i4.PageRouteInfo>? children})
+class HomeRoute extends _i5.PageRouteInfo<HomeRouteArgs> {
+  HomeRoute({_i6.Key? key, List<_i5.PageRouteInfo>? children})
     : super(
         HomeRoute.name,
         args: HomeRouteArgs(key: key),
@@ -29,13 +31,13 @@ class HomeRoute extends _i4.PageRouteInfo<HomeRouteArgs> {
 
   static const String name = 'HomeRoute';
 
-  static _i4.PageInfo page = _i4.PageInfo(
+  static _i5.PageInfo page = _i5.PageInfo(
     name,
     builder: (data) {
       final args = data.argsAs<HomeRouteArgs>(
         orElse: () => const HomeRouteArgs(),
       );
-      return _i4.WrappedRoute(child: _i1.HomeScreen(key: args.key));
+      return _i5.WrappedRoute(child: _i1.HomeScreen(key: args.key));
     },
   );
 }
@@ -43,7 +45,7 @@ class HomeRoute extends _i4.PageRouteInfo<HomeRouteArgs> {
 class HomeRouteArgs {
   const HomeRouteArgs({this.key});
 
-  final _i5.Key? key;
+  final _i6.Key? key;
 
   @override
   String toString() {
@@ -63,8 +65,8 @@ class HomeRouteArgs {
 
 /// generated route for
 /// [_i2.LoginScreen]
-class LoginRoute extends _i4.PageRouteInfo<LoginRouteArgs> {
-  LoginRoute({_i5.Key? key, List<_i4.PageRouteInfo>? children})
+class LoginRoute extends _i5.PageRouteInfo<LoginRouteArgs> {
+  LoginRoute({_i6.Key? key, List<_i5.PageRouteInfo>? children})
     : super(
         LoginRoute.name,
         args: LoginRouteArgs(key: key),
@@ -73,13 +75,13 @@ class LoginRoute extends _i4.PageRouteInfo<LoginRouteArgs> {
 
   static const String name = 'LoginRoute';
 
-  static _i4.PageInfo page = _i4.PageInfo(
+  static _i5.PageInfo page = _i5.PageInfo(
     name,
     builder: (data) {
       final args = data.argsAs<LoginRouteArgs>(
         orElse: () => const LoginRouteArgs(),
       );
-      return _i4.WrappedRoute(child: _i2.LoginScreen(key: args.key));
+      return _i5.WrappedRoute(child: _i2.LoginScreen(key: args.key));
     },
   );
 }
@@ -87,7 +89,7 @@ class LoginRoute extends _i4.PageRouteInfo<LoginRouteArgs> {
 class LoginRouteArgs {
   const LoginRouteArgs({this.key});
 
-  final _i5.Key? key;
+  final _i6.Key? key;
 
   @override
   String toString() {
@@ -107,16 +109,82 @@ class LoginRouteArgs {
 
 /// generated route for
 /// [_i3.SplashScreen]
-class SplashRoute extends _i4.PageRouteInfo<void> {
-  const SplashRoute({List<_i4.PageRouteInfo>? children})
+class SplashRoute extends _i5.PageRouteInfo<void> {
+  const SplashRoute({List<_i5.PageRouteInfo>? children})
     : super(SplashRoute.name, initialChildren: children);
 
   static const String name = 'SplashRoute';
 
-  static _i4.PageInfo page = _i4.PageInfo(
+  static _i5.PageInfo page = _i5.PageInfo(
     name,
     builder: (data) {
       return const _i3.SplashScreen();
     },
   );
+}
+
+/// generated route for
+/// [_i4.CategoryDetailsScreen]
+class CategoryDetailsRoute extends _i5.PageRouteInfo<CategoryDetailsRouteArgs> {
+  CategoryDetailsRoute({
+    _i6.Key? key,
+    required String categoryName,
+    required String categoryImage,
+    List<_i5.PageRouteInfo>? children,
+  }) : super(
+          CategoryDetailsRoute.name,
+          args: CategoryDetailsRouteArgs(
+            key: key,
+            categoryName: categoryName,
+            categoryImage: categoryImage,
+          ),
+          rawPathParams: {'categoryName': categoryName},
+          rawQueryParams: {'categoryImage': categoryImage},
+          initialChildren: children,
+        );
+
+  static const String name = 'CategoryDetailsRoute';
+
+  static _i5.PageInfo page = _i5.PageInfo(
+    name,
+    builder: (data) {
+      final args = data.argsAs<CategoryDetailsRouteArgs>();
+      return _i5.WrappedRoute(
+        child: _i4.CategoryDetailsScreen(
+          key: args.key,
+          categoryName: args.categoryName,
+          categoryImage: args.categoryImage,
+        ),
+      );
+    },
+  );
+}
+
+class CategoryDetailsRouteArgs {
+  const CategoryDetailsRouteArgs({
+    this.key,
+    required this.categoryName,
+    required this.categoryImage,
+  });
+
+  final _i6.Key? key;
+  final String categoryName;
+  final String categoryImage;
+
+  @override
+  String toString() {
+    return 'CategoryDetailsRouteArgs{key: $key, categoryName: $categoryName, categoryImage: $categoryImage}';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+    if (other is! CategoryDetailsRouteArgs) return false;
+    return key == other.key && 
+           categoryName == other.categoryName && 
+           categoryImage == other.categoryImage;
+  }
+
+  @override
+  int get hashCode => Object.hash(key, categoryName, categoryImage);
 }

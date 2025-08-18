@@ -7,7 +7,46 @@ class AppStrings {
   static const elevator = "elevator";
   static const centralSatellite = "central_satellite";
   static const generalCleaning = "general_cleaning";
+  // Security
+  static const securityGuardProvision = 'security_guard_provision';
+  static const securitySystemModification = 'security_system_modification';
+  static const cctvInstallation = 'cctv_installation';
+  static const cctvMaintenance = 'cctv_maintenance';
+  static const magneticCardSystem = 'magnetic_card_system';
+  static const alarmDeviceInstallation = 'alarm_device_installation';
 
+  // Satellite
+  static const satelliteInstallation = 'satellite_installation';
+  static const satelliteMaintenance = 'satellite_maintenance';
+  static const satelliteUpdate = 'satellite_update';
+  static const satelliteInspection = 'satellite_inspection';
+
+  // Elevator
+  static const elevatorInstallation = 'elevator_installation';
+  static const elevatorRenewal = 'elevator_renewal';
+  static const elevatorRepair = 'elevator_repair';
+  static const inspectionAndQuotation = 'inspection_and_quotation';
+
+  // Water Tank
+  static const tankInstallation = 'tank_installation';
+  static const tankRepair = 'tank_repair';
+  static const regularCleaning = 'regular_cleaning';
+
+  // General Cleaning
+  static const stairCleaning = 'stair_cleaning';
+  static const roofCleaning = 'roof_cleaning';
+  static const receptionCleaning = 'reception_cleaning';
+  static const outsidePropertyCleaning = 'outside_property_cleaning';
+  static const garbageRemoval = 'garbage_removal';
+  static const deepCleaning = 'deep_cleaning';
+
+  // Decoration
+  static const propertyTreePlanting = 'property_tree_planting';
+  static const streetDecoration = 'street_decoration';
+  static const roofDecoration = 'roof_decoration';
+  static const paintingAndRenovation = 'painting_and_renovation';
+  static const lighting = 'lighting';
+  static const customDecoration = 'custom_decoration';
   static const noRouteFound = "noRouteFound";
   static const skip = "skip";
   static const username = "username_hint";

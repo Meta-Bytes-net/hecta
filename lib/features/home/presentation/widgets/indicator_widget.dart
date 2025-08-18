@@ -9,12 +9,12 @@ class IndicatorWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ValueListenableBuilder(
-      valueListenable: yourActiveIndex,
+      valueListenable: activeIndex,
       builder: (BuildContext context, value, Widget? child) {
         return SizedBox(
           height: 20.h,
           child: AnimatedSmoothIndicator(
-            activeIndex: yourActiveIndex.value,
+            activeIndex: activeIndex.value,
             count: 6, // Adjust based on the number of items
             effect: WormEffect(
               dotHeight: 10.h,

@@ -12,9 +12,7 @@ class HomeCarousel extends StatefulWidget {
   State<HomeCarousel> createState() => _HomeCarouselState();
 }
 
-ValueNotifier yourActiveIndex = ValueNotifier(
-  0,
-); // This should be managed properly in a real app
+ValueNotifier activeIndex = ValueNotifier(0);
 
 class _HomeCarouselState extends State<HomeCarousel> {
   @override
@@ -39,7 +37,7 @@ class _HomeCarouselState extends State<HomeCarousel> {
               enlargeCenterPage: true,
               enlargeFactor: .3,
               onPageChanged: (index, reason) {
-                yourActiveIndex.value = index;
+                activeIndex.value = index;
               },
               scrollDirection: Axis.horizontal,
             ),

@@ -22,6 +22,11 @@ final class AppRouter extends RootStackRouter {
     ),
 
     AutoRoute(path: Routers.home, page: HomeRoute.page),
+    
+    AutoRoute(
+      path: Routers.categoryDetails,
+      page: CategoryDetailsRoute.page,
+    ),
 
     AutoRoute(initial: true, path: Routers.splash, page: SplashRoute.page),
   ];
@@ -32,6 +37,7 @@ final class Routers {
 
   static const String login = '/login';
   static const String home = '/home';
+  static const String categoryDetails = '/category-details/:categoryName';
 
   static const String splash = '/splash';
 

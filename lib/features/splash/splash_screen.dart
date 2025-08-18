@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:hecta/core/helpers/app_assets.dart';
 import 'package:hecta/core/routing/app_router.gr.dart';
 
-import '../../../core/theming/app_colors.dart';
+import '../../core/theming/app_colors.dart';
 
 @RoutePage()
 class SplashScreen extends StatefulWidget {
