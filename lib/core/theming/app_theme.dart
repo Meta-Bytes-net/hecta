@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hecta/core/theming/app_colors.dart';
+import 'package:hecta/core/theming/app_font.dart';
 import 'package:hecta/core/theming/app_sizes.dart';
+import 'package:hecta/core/theming/app_text_styles.dart';
 
 ThemeData getApplicationTheme() {
   return ThemeData(
@@ -8,13 +10,13 @@ ThemeData getApplicationTheme() {
     primaryColor: AppColors.mainBlue,
     // primaryColorLight: AppColors.lightPrimary,
     // primaryColorDark: AppColors.darkPrimary,
-    // disabledColor: AppColors.grey1,
+    // disabledColor: AppColors.blckColor,
     // splashColor: AppColors.lightPrimary,
     // ripple effect color
     // cardview theme
     // cardTheme: CardTheme(
     //   color: AppColors.white,
-    //   shadowColor: AppColors.grey,
+    //   shadowColor: AppColors.blckColor,
     //   elevation: AppSize.s4,
     // ),
     // app bar theme
@@ -31,7 +33,7 @@ ThemeData getApplicationTheme() {
     // button theme
     buttonTheme: ButtonThemeData(
       shape: const StadiumBorder(),
-      // disabledColor: AppColors.grey1,
+      // disabledColor: AppColors.blckColor,
       // buttonColor: AppColors.primary,
       // splashColor: AppColors.lightPrimary,
     ),
@@ -50,51 +52,57 @@ ThemeData getApplicationTheme() {
       ),
     ),
 
+    // text theme
     // textTheme: TextTheme(
-    //   displayLarge: getSemiBoldStyle(
-    //     color: AppColors.darkGrey,
-    //     fontSize: FontSize.s16,
-    //   ),
-    //   headlineLarge: getSemiBoldStyle(
-    //     color: AppColors.darkGrey,
-    //     fontSize: FontSize.s16,
-    //   ),
-    //   headlineMedium: getRegularStyle(
-    //     color: AppColors.darkGrey,
-    //     fontSize: FontSize.s14,
-    //   ),
-    //   titleMedium: getMediumStyle(
-    //     color: AppColors.primary,
-    //     fontSize: FontSize.s16,
-    //   ),
-    //   titleSmall: getRegularStyle(
-    //     color: AppColors.white,
-    //     fontSize: FontSize.s16,
-    //   ),
-    //   bodyLarge: getRegularStyle(color: AppColors.grey1),
-    //   bodySmall: getRegularStyle(color: AppColors.grey),
-    //   bodyMedium: getRegularStyle(
-    //     color: AppColors.grey2,
-    //     fontSize: FontSize.s12,
-    //   ),
-    //   labelSmall: getBoldStyle(
-    //     color: AppColors.primary,
-    //     fontSize: FontSize.s12,
-    //   ),
-    // ),
+    textTheme: TextTheme(
+      titleLarge: getSemiBoldStyle(
+        color: AppColors.whiteColor,
+        fontSize: FontSize.s18,
+      ),
+      labelMedium: getBoldStyle(
+        color: AppColors.blckColor,
+        fontSize: FontSize.s12,
+      ).copyWith(height: 1.5),
+      // headlineLarge: getSemiBoldStyle(
+      //   color: AppColors.blckColor,
+      //   fontSize: FontSize.s16,
+      // ),
+      // headlineMedium: getRegularStyle(
+      //   color: AppColors.blckColor,
+      //   fontSize: FontSize.s14,
+      // ),
+      // titleMedium: getMediumStyle(
+      //   color: AppColors.mainBlue,
+      //   fontSize: FontSize.s16,
+      // ),
+      // titleSmall: getRegularStyle(
+      //   color: AppColors.mainBlue,
+      //   fontSize: FontSize.s16,
+      // ),
+      // bodyLarge: getRegularStyle(color: AppColors.blckColor),
+      // bodySmall: getRegularStyle(color: AppColors.blckColor),
+      // bodyMedium: getRegularStyle(
+      //   color: AppColors.blckColor,
+      //   fontSize: FontSize.s12,
+      // ),
+      // labelSmall: getBoldStyle(
+      //   color: AppColors.mainBlue,
+      //   fontSize: FontSize.s12,
+      // ),
+    ),
 
     // input decoration theme (text form field)
     inputDecorationTheme: InputDecorationTheme(
       // content padding
       contentPadding: const EdgeInsets.all(AppPadding.p8),
       // hint style
-      // hintStyle: getRegularStyle(color: AppColors.grey, fontSize: FontSize.s14),
-      // labelStyle: getMediumStyle(color: AppColors.grey, fontSize: FontSize.s14),
+      // hintStyle: getRegularStyle(color: AppColors.blckColor, fontSize: FontSize.s14),
+      // labelStyle: getMediumStyle(color: AppColors.blckColor, fontSize: FontSize.s14),
       // errorStyle: getRegularStyle(color: AppColors.error),
 
       // enabled border style
       enabledBorder: OutlineInputBorder(
-        // borderSide: BorderSide(color: AppColors.grey, width: AppSize.s1_5),
+        // borderSide: BorderSide(color: AppColors.blckColor, width: AppSize.s1_5),
         borderRadius: const BorderRadius.all(Radius.circular(AppSize.s8)),
       ),
 

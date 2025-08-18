@@ -27,7 +27,7 @@ extension DataSourceExtension on DataSource {
           ResponseMessage.connectTimeOut,
         );
       case DataSource.cancelled:
-        return Failure(ResponseCode.cancelled, ResponseMessage.cancelled);
+        return Failure(ResponseCode.cancelled, ResponseMessage.defaultError);
       case DataSource.receiveTimeOut:
         return Failure(
           ResponseCode.receiveTimeOut,

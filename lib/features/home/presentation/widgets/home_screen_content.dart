@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:hecta/core/theming/app_sizes.dart';
 import 'package:hecta/features/home/presentation/widgets/home_carousel.dart';
 import 'package:hecta/features/home/presentation/widgets/services_grid_view.dart';
 
@@ -8,9 +10,12 @@ class HomeScreenContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+      padding: EdgeInsets.symmetric(
+        horizontal: AppPadding.p20.sp,
+        vertical: AppPadding.p20.sp,
+      ),
       child: Column(
-        spacing: 30,
+        spacing: AppSize.s40.sp,
         children: [HomeCarousel(), ServicesGridView()],
       ),
     );

@@ -1,14 +1,14 @@
 class AppStrings {
-  static const noRouteFound = "noRouteFound";
-  static const onBoardingTitle1 = "on_boarding_title1";
-  static const onBoardingTitle2 = "on_boarding_title2";
-  static const onBoardingTitle3 = "on_boarding_title3";
-  static const onBoardingTitle4 = "on_boarding_title4";
+  static const hectaBuildingServices = "hecta_building_services";
+  static const centralAc = "central_ac";
+  static const decoration = "decoration";
+  static const security = "security";
+  static const waterTank = "water_tank";
+  static const elevator = "elevator";
+  static const centralSatellite = "central_satellite";
+  static const generalCleaning = "general_cleaning";
 
-  static const onBoardingSubTitle1 = "on_boarding_desc1";
-  static const onBoardingSubTitle2 = "on_boarding_desc2";
-  static const onBoardingSubTitle3 = "on_boarding_desc3";
-  static const onBoardingSubTitle4 = "on_boarding_desc4";
+  static const noRouteFound = "noRouteFound";
   static const skip = "skip";
   static const username = "username_hint";
   static const password = "password_hint";
@@ -25,8 +25,7 @@ class AppStrings {
   static const String resetPassword = "reset_password";
   static const String success = "success";
   static const String userNameInvalid = "username_hint_message";
-  static const String mobileNumberInvalid =
-      "mobile_number_hint_message";
+  static const String mobileNumberInvalid = "mobile_number_hint_message";
   static const String passwordInvalid = "password_hint_message";
   static const String alreadyHaveAccount = "already_have_account";
   static const register = "register";
@@ -61,4 +60,6 @@ class AppStrings {
   static const String defaultError = "default_error";
   static const String cacheError = "cache_error";
   static const String noInternetError = "no_internet_error";
+  static const String badRequest =
+      "bad_request"; // todo handle localization to support many langs.
 }

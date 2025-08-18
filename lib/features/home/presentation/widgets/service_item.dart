@@ -1,5 +1,9 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hecta/core/helpers/app_assets.dart';
+import 'package:hecta/core/helpers/app_strings.dart';
+import 'package:hecta/core/helpers/extensions/extensions.dart';
 
 class ServiceItem extends StatelessWidget {
   final String label;
@@ -29,17 +33,15 @@ class ServiceItem extends StatelessWidget {
             ),
             child: Image.asset(
               imagePath,
-              height: 70,
-              width: 70,
+              height: context.screenHeight * 0.075,
+              width: context.screenHeight * 0.075,
               fit: BoxFit.cover,
             ),
           ),
-          const SizedBox(height: 8),
+          15.verticalSpace,
           Text(
-            label,
-            style: Theme.of(
-              context,
-            ).textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.w500),
+            label.tr(),
+            style: context.textTheme.labelMedium,
             textAlign: TextAlign.center,
           ),
         ],
@@ -55,18 +57,33 @@ class ServiceModel {
   const ServiceModel({required this.label, required this.imagePath});
   static List<ServiceModel> get servicesList {
     return [
-      ServiceModel(label: "التكييف المركزي", imagePath: Assets.imagesServices),
-      ServiceModel(label: "التزيين", imagePath: Assets.imagesDecoration),
-      ServiceModel(label: "الأمن", imagePath: Assets.imagesSecurity),
-      ServiceModel(label: "خزان المياه", imagePath: Assets.imagesWaterTank),
-      ServiceModel(label: "المصعد", imagePath: Assets.imagesElevator),
       ServiceModel(
-        label: "الدش المركزي",
-        imagePath: Assets.imagesCentralSatellite,
+        imagePath: Assets.imagesServices,
+        label: AppStrings.centralAc,
       ),
       ServiceModel(
-        label: "نظافة عامة",
+        imagePath: Assets.imagesDecoration,
+        label: AppStrings.decoration,
+      ),
+      ServiceModel(
+        imagePath: Assets.imagesSecurity,
+        label: AppStrings.security,
+      ),
+      ServiceModel(
+        imagePath: Assets.imagesWaterTank,
+        label: AppStrings.waterTank,
+      ),
+      ServiceModel(
+        imagePath: Assets.imagesElevator,
+        label: AppStrings.elevator,
+      ),
+      ServiceModel(
+        imagePath: Assets.imagesCentralSatellite,
+        label: AppStrings.centralSatellite,
+      ),
+      ServiceModel(
         imagePath: Assets.imagesGeneralCleaning,
+        label: AppStrings.generalCleaning,
       ),
     ];
   }

@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:hecta/core/helpers/app_assets.dart';
 import 'package:hecta/core/routing/app_router.gr.dart';
 
+import '../../../core/theming/app_colors.dart';
+
 @RoutePage()
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -32,13 +34,17 @@ class SplashScreenState extends State<SplashScreen>
 
     _scaleAnimation = TweenSequence<double>([
       TweenSequenceItem(
-        tween: Tween<double>(begin: 0.95, end: 1.05)
-            .chain(CurveTween(curve: Curves.easeOut)),
+        tween: Tween<double>(
+          begin: 0.95,
+          end: 1.05,
+        ).chain(CurveTween(curve: Curves.easeOut)),
         weight: 40.0,
       ),
       TweenSequenceItem(
-        tween: Tween<double>(begin: 1.07, end: 1.0)
-            .chain(CurveTween(curve: Curves.easeInOut)),
+        tween: Tween<double>(
+          begin: 1.07,
+          end: 1.0,
+        ).chain(CurveTween(curve: Curves.easeInOut)),
         weight: 60.0,
       ),
     ]).animate(_controller);
@@ -48,7 +54,7 @@ class SplashScreenState extends State<SplashScreen>
 
       Future.delayed(const Duration(milliseconds: 2800), () {
         if (!mounted) return;
-        context.replaceRoute( HomeRoute());
+        context.replaceRoute(HomeRoute());
       });
     });
   }
@@ -62,7 +68,7 @@ class SplashScreenState extends State<SplashScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF0554cb),
+      backgroundColor: AppColors.mainBlue,
       body: Center(
         child: AnimatedBuilder(
           animation: _controller,

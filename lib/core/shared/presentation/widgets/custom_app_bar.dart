@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:hecta/core/helpers/extensions/extensions.dart';
 import 'package:hecta/core/theming/app_colors.dart';
-
-import '../../../theming/app_text_styles.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
@@ -40,7 +39,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
               onPressed: onBack ?? () => Navigator.of(context).maybePop(),
             )
           : null,
-      title: Text(title, style: TextStyles.font24BlackBold),
+      title: Text(title, style: context.textTheme.titleLarge),
       actions: actions,
       foregroundColor: AppColors.mainBlue,
     );

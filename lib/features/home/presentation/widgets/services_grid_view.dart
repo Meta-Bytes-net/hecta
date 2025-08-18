@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hecta/features/home/presentation/widgets/service_item.dart';
 
 class ServicesGridView extends StatelessWidget {
@@ -9,12 +10,12 @@ class ServicesGridView extends StatelessWidget {
     return Expanded(
       child: GridView.builder(
         itemCount: 7,
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 3,
-          mainAxisSpacing: 10,
-          crossAxisSpacing: 10,
+          crossAxisSpacing: 10.w,
           childAspectRatio: .7,
         ),
+
         itemBuilder: (context, index) => ServiceItem(
           imagePath: ServiceModel.servicesList[index].imagePath,
           label: ServiceModel.servicesList[index].label,
