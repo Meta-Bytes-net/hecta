@@ -22,8 +22,10 @@ ThemeData getApplicationTheme() {
     // app bar theme
     appBarTheme: AppBarTheme(
       centerTitle: true,
+
       // color: AppColors.primary,
       elevation: AppSize.s4,
+
       // shadowColor: AppColors.lightPrimary,
       // titleTextStyle: getRegularStyle(
       //   fontSize: FontSize.s16,
@@ -63,6 +65,45 @@ ThemeData getApplicationTheme() {
         color: AppColors.blckColor,
         fontSize: FontSize.s12,
       ).copyWith(height: 1.5),
+      bodyLarge: getRegularStyle(
+        color: AppColors.blckColor,
+        fontSize: FontSize.s14,
+      ),
+      bodyMedium: getRegularStyle(
+        color: AppColors.blckColor,
+        fontSize: FontSize.s12,
+      ),
+      bodySmall: getRegularStyle(
+        color: AppColors.blckColor,
+        fontSize: FontSize.s12,
+      ),
+      titleSmall: getMediumStyle(
+        color: AppColors.blckColor,
+        fontSize: FontSize.s14,
+      ),
+      labelSmall: getBoldStyle(
+        color: AppColors.mainBlue,
+        fontSize: FontSize.s12,
+      ),
+      headlineLarge: getSemiBoldStyle(
+        color: AppColors.blckColor,
+        fontSize: FontSize.s16,
+      ),
+      headlineMedium: getRegularStyle(
+        color: AppColors.blckColor,
+        fontSize: FontSize.s14,
+      ),
+      titleMedium: getMediumStyle(
+        color: AppColors.blckColor,
+        fontSize: FontSize.s16,
+      ),
+      headlineSmall: getRegularStyle(
+        color: AppColors.blckColor,
+        fontSize: FontSize.s14,
+      ),
+
+      // bodyLarge: getRegularStyle(color: AppColors.blckColor),
+
       // headlineLarge: getSemiBoldStyle(
       //   color: AppColors.blckColor,
       //   fontSize: FontSize.s16,

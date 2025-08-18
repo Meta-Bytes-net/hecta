@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hecta/core/theming/app_sizes.dart';
+import 'package:hecta/features/home/presentation/widgets/categories_grid_view.dart';
 import 'package:hecta/features/home/presentation/widgets/home_carousel.dart';
-import 'package:hecta/features/home/presentation/widgets/services_grid_view.dart';
 
 class HomeScreenContent extends StatelessWidget {
   const HomeScreenContent({super.key});
@@ -16,7 +16,7 @@ class HomeScreenContent extends StatelessWidget {
       ),
       child: Column(
         spacing: AppSize.s40.sp,
-        children: [HomeCarousel(), ServicesGridView()],
+        children: [HomeCarousel(), CategoriesGridView()],
       ),
     );
   }

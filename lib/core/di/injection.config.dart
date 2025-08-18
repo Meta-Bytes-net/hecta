@@ -15,6 +15,8 @@ import 'package:hecta/core/networking/network_info/network_info.dart' as _i911;
 import 'package:hecta/core/routing/app_router.dart' as _i27;
 import 'package:hecta/features/auth/presentation/cubit/login_cubit.dart'
     as _i283;
+import 'package:hecta/features/category_details/presentation/cubit/category_details_cubit.dart'
+    as _i504;
 import 'package:hecta/features/home/presentation/cubit/home_cubit.dart'
     as _i487;
 import 'package:injectable/injectable.dart' as _i526;
@@ -28,6 +30,7 @@ extension GetItInjectableX on _i174.GetIt {
     final gh = _i526.GetItHelper(this, environment, environmentFilter);
     final dataModule = _$DataModule();
     gh.factory<_i283.LoginCubit>(() => _i283.LoginCubit());
+    gh.factory<_i504.CategoryDetailsCubit>(() => _i504.CategoryDetailsCubit());
     gh.factory<_i487.HomeCubit>(() => _i487.HomeCubit());
     gh.singleton<_i27.AppRouter>(() => _i27.AppRouter());
     gh.lazySingleton<_i911.NetworkInfo>(() => dataModule.provideNetworkInfo());
