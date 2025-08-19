@@ -10,7 +10,19 @@ class AppStrings {
   static const more = 'more';
   static const orders = 'orders';
   static const customerService = 'customer_service';
-
+  static const ordersShort = 'orders_short';
+  static const pending = 'pending';
+  static const inProgress = 'in_progress';
+  static const done = 'done';
+  static const cancelled = 'cancelled';
+  static const orderNo = 'order_no';
+  static const mainDept = 'main_dept';
+  static const subDept = 'sub_dept';
+  static const settings = 'settings';
+  static const home = 'home';
+  static const chats = 'chats';
+  static const profile = 'profile';
+  static const switchLanguage = 'switch_language';
   // Security
   static const securityGuardProvision = 'security_guard_provision';
   static const securitySystemModification = 'security_system_modification';
@@ -79,7 +91,6 @@ class AppStrings {
   // static const home = "home";
   static const notifications = "notification";
   static const search = "search";
-  static const settings = "settings";
   static const services = "services";
   static const stores = "stores";
   static const String details = "details";

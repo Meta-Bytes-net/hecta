@@ -21,7 +21,6 @@ final class AppRouter extends RootStackRouter {
       duration: Duration(milliseconds: 700),
     ),
 
-    AutoRoute(path: Routers.home, page: HomeRoute.page),
     AutoRoute(path: Routers.mainLayout, page: MainLayout.page),
     AutoRoute(path: Routers.categoryDetails, page: CategoryDetailsRoute.page),
     AutoRoute(initial: true, path: Routers.splash, page: SplashRoute.page),
