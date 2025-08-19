@@ -6,18 +6,6 @@ class Assets {
   /// assets/images/1.png
   static const String images1 = "assets/images/1.png";
 
-  /// Assets for images10
-  /// assets/images/10.png
-  static const String images10 = "assets/images/10.png";
-
-  /// Assets for images11
-  /// assets/images/11.png
-  static const String images11 = "assets/images/11.png";
-
-  /// Assets for images12
-  /// assets/images/12.png
-  static const String images12 = "assets/images/12.png";
-
   /// Assets for images13
   /// assets/images/13.png
   static const String images13 = "assets/images/13.png";
@@ -226,13 +214,13 @@ class Assets {
   /// assets/images/64.png
   static const String images64 = "assets/images/64.png";
 
-  /// Assets for images9
-  /// assets/images/9.png
-  static const String images9 = "assets/images/9.png";
-
   /// Assets for imagesCentralSatellite
   /// assets/images/central_satellite.png
   static const String imagesCentralSatellite = "assets/images/central_satellite.png";
+
+  /// Assets for imagesChatIcon
+  /// assets/images/chat_icon.png
+  static const String imagesChatIcon = "assets/images/chat_icon.png";
 
   /// Assets for imagesDecoration
   /// assets/images/decoration.png
@@ -254,9 +242,21 @@ class Assets {
   /// assets/images/hecta_logo.png
   static const String imagesHectaLogo = "assets/images/hecta_logo.png";
 
+  /// Assets for imagesHomeIcon
+  /// assets/images/home_icon.png
+  static const String imagesHomeIcon = "assets/images/home_icon.png";
+
   /// Assets for imagesMainLogo
   /// assets/images/main_logo.png
   static const String imagesMainLogo = "assets/images/main_logo.png";
+
+  /// Assets for imagesMoreIcon
+  /// assets/images/more_icon.png
+  static const String imagesMoreIcon = "assets/images/more_icon.png";
+
+  /// Assets for imagesOrdersIcon
+  /// assets/images/orders_icon.png
+  static const String imagesOrdersIcon = "assets/images/orders_icon.png";
 
   /// Assets for imagesProfile
   /// assets/images/profile.png

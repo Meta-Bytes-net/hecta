@@ -7,6 +7,10 @@ class AppStrings {
   static const elevator = "elevator";
   static const centralSatellite = "central_satellite";
   static const generalCleaning = "general_cleaning";
+  static const more = 'more';
+  static const orders = 'orders';
+  static const customerService = 'customer_service';
+
   // Security
   static const securityGuardProvision = 'security_guard_provision';
   static const securitySystemModification = 'security_system_modification';
@@ -72,7 +76,7 @@ class AppStrings {
   static const profilePicture = "upload_profile_picture";
   static const photoGallery = "photo_from_galley";
   static const photoCamera = "photo_from_camera";
-  static const home = "home";
+  // static const home = "home";
   static const notifications = "notification";
   static const search = "search";
   static const settings = "settings";

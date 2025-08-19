@@ -1,9 +1,8 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:hecta/core/routing/app_router.gr.dart';
 import 'package:hecta/features/home/presentation/widgets/category_item.dart';
-
-import '../../../../core/routing/app_router.gr.dart';
 
 class CategoriesGridView extends StatelessWidget {
   const CategoriesGridView({super.key});
@@ -26,7 +25,7 @@ class CategoriesGridView extends StatelessWidget {
             context.router.push(
               CategoryDetailsRoute(
                 categoryName: ServiceModel.servicesList[index].label,
-                categoryImage: ServiceModel.servicesList[index].imagePath,
+                // categoryImage: ServiceModel.servicesList[index].imagePath,
               ),
             );
           },

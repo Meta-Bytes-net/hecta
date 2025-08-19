@@ -10,20 +10,20 @@ import 'package:hecta/features/category_details/presentation/widgets/category_de
 @RoutePage()
 class CategoryDetailsScreen extends BaseCubitWrapper<CategoryDetailsCubit> {
   final String categoryName;
-  final String categoryImage;
+  // final String categoryImage;
 
   CategoryDetailsScreen({
     super.key,
     @PathParam('categoryName') required this.categoryName,
-    @QueryParam('categoryImage') required this.categoryImage,
+    // @QueryParam('categoryImage') required this.categoryImage,
   }) : super(
-          createCubit: (ctx) => getIt<CategoryDetailsCubit>(),
-          child: Scaffold(
-            appBar: CustomAppBar(title: categoryName.tr()),
-            body: CategoryDetailsContent(
-              categoryName: categoryName,
-              categoryImage: categoryImage,
-            ),
-          ),
-        );
+         createCubit: (ctx) => getIt<CategoryDetailsCubit>(),
+         child: Scaffold(
+           appBar: CustomAppBar(title: categoryName.tr()),
+           body: CategoryDetailsContent(
+             categoryName: categoryName,
+             //  categoryImage: categoryImage,
+           ),
+         ),
+       );
 }
