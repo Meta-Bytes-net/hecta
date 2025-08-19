@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hecta/core/helpers/app_assets.dart';
 import 'package:hecta/core/helpers/extensions/extensions.dart';
+import 'package:hecta/core/shared/presentation/widgets/base_content_widget.dart';
 import 'package:hecta/core/theming/app_colors.dart';
 import 'package:hecta/core/theming/app_sizes.dart';
 
@@ -12,22 +13,49 @@ class MoreScreenContent extends StatelessWidget {
   Widget build(BuildContext context) {
     // List of options with their corresponding icons.
     final List<_MoreOption> options = [
-      _MoreOption(title: 'تعديل الملف الشخصى', iconPath: Assets.imagesProfile, onTap: () {}),
-      _MoreOption(title: 'تعديل كلمة المرور', iconPath: Assets.imagesSecurity, onTap: () {}),
-      _MoreOption(title: 'اتصل بنا', iconPath: Assets.imagesChatIcon, onTap: () {}),
-      _MoreOption(title: 'الباقات', iconPath: Assets.imagesServices, onTap: () {}),
-      _MoreOption(title: 'عن التطبيق', iconPath: Assets.imagesHectaIcon, onTap: () {}),
-      _MoreOption(title: 'سياسة الخصوصية', iconPath: Assets.imagesGeneralCleaning, onTap: () {}),
-      _MoreOption(title: 'الشروط والأحكام', iconPath: Assets.imagesMoreIcon, onTap: () {}),
+      _MoreOption(
+        title: 'تعديل الملف الشخصى',
+        iconPath: Assets.imagesProfile,
+        onTap: () {},
+      ),
+      _MoreOption(
+        title: 'تعديل كلمة المرور',
+        iconPath: Assets.imagesSecurity,
+        onTap: () {},
+      ),
+      _MoreOption(
+        title: 'اتصل بنا',
+        iconPath: Assets.imagesChatIcon,
+        onTap: () {},
+      ),
+      _MoreOption(
+        title: 'الباقات',
+        iconPath: Assets.imagesServices,
+        onTap: () {},
+      ),
+      _MoreOption(
+        title: 'عن التطبيق',
+        iconPath: Assets.imagesHectaIcon,
+        onTap: () {},
+      ),
+      _MoreOption(
+        title: 'سياسة الخصوصية',
+        iconPath: Assets.imagesGeneralCleaning,
+        onTap: () {},
+      ),
+      _MoreOption(
+        title: 'الشروط والأحكام',
+        iconPath: Assets.imagesMoreIcon,
+        onTap: () {},
+      ),
     ];
 
     return BaseContentWidget(
       bottomPadding: AppPadding.p20,
       child: Column(
+        spacing: AppSize.s28.h,
         children: [
-          SizedBox(height: AppSize.s24.h),
           _buildAvatar(context),
-          SizedBox(height: AppSize.s24.h),
           Container(
             decoration: BoxDecoration(
               color: AppColors.whiteColor,
@@ -70,7 +98,11 @@ class _MoreOption {
   final String title;
   final String iconPath;
   final VoidCallback onTap;
-  const _MoreOption({required this.title, required this.iconPath, required this.onTap});
+  const _MoreOption({
+    required this.title,
+    required this.iconPath,
+    required this.onTap,
+  });
 }
 
 class _MoreTile extends StatelessWidget {
@@ -80,10 +112,17 @@ class _MoreTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      contentPadding: EdgeInsets.symmetric(horizontal: AppPadding.p16.w, vertical: AppPadding.p4.h),
-      leading: ImageIcon(AssetImage(option.iconPath), color: AppColors.mainBlue, size: AppSize.s28.sp),
+      contentPadding: EdgeInsets.symmetric(
+        horizontal: AppPadding.p16.w,
+        vertical: AppPadding.p8.h,
+      ),
+      leading: ImageIcon(
+        AssetImage(option.iconPath),
+        color: AppColors.mainBlue,
+        size: AppSize.s28.sp,
+      ),
       title: Text(option.title, style: context.textTheme.bodyMedium),
-      trailing: const Icon(Icons.arrow_back_ios_new, color: AppColors.gray),
+      trailing: Icon(Icons.arrow_back_ios_new, color: AppColors),
       onTap: option.onTap,
     );
   }
