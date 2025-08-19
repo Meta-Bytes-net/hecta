@@ -24,7 +24,7 @@ ThemeData getApplicationTheme() {
       centerTitle: true,
 
       // color: AppColors.primary,
-      elevation: AppSize.s4,
+      // elevation: AppSize.s4,
 
       // shadowColor: AppColors.lightPrimary,
       // titleTextStyle: getRegularStyle(
@@ -33,12 +33,12 @@ ThemeData getApplicationTheme() {
       // ),
     ),
     // button theme
-    buttonTheme: ButtonThemeData(
-      shape: const StadiumBorder(),
-      // disabledColor: AppColors.blckColor,
-      // buttonColor: AppColors.primary,
-      // splashColor: AppColors.lightPrimary,
-    ),
+    // buttonTheme: ButtonThemeData(
+    //   shape: const StadiumBorder(),
+    //   // disabledColor: AppColors.blckColor,
+    //   // buttonColor: AppColors.primary,
+    //   // splashColor: AppColors.lightPrimary,
+    // ),
 
     // elevated button them
     elevatedButtonTheme: ElevatedButtonThemeData(
@@ -131,7 +131,10 @@ ThemeData getApplicationTheme() {
       //   fontSize: FontSize.s12,
       // ),
     ),
-
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      backgroundColor: Colors.transparent,
+      
+    ),
     // input decoration theme (text form field)
     inputDecorationTheme: InputDecorationTheme(
       // content padding
