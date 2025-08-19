@@ -54,7 +54,7 @@ class SplashScreenState extends State<SplashScreen>
 
       Future.delayed(const Duration(milliseconds: 2800), () {
         if (!mounted) return;
-        context.replaceRoute(HomeRoute());
+        context.replaceRoute(MainLayout());
       });
     });
   }

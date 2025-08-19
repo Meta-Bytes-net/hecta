@@ -6,12 +6,12 @@ import 'package:hecta/features/category_details/data/models/service_details_mode
 
 class CategoryDetailsContent extends StatelessWidget {
   final String categoryName;
-  final String categoryImage;
+  // final String categoryImage;
 
   const CategoryDetailsContent({
     super.key,
     required this.categoryName,
-    required this.categoryImage,
+    // required this.categoryImage,
   });
 
   @override
