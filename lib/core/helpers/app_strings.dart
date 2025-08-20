@@ -1,4 +1,11 @@
 class AppStrings {
+  static const String editProfile = "edit_profile";
+  static const String editPassword = "edit_password";
+  static const String contactUs = "contact_us";
+  static const String packages = "packages";
+  static const String aboutApp = "about_app";
+  static const String privacyPolicy = "privacy_policy";
+  static const String termsAndConditions = "terms_and_conditions";
   static const hectaBuildingServices = "hecta_building_services";
   static const centralAc = "central_ac";
   static const decoration = "decoration";
@@ -97,7 +104,6 @@ class AppStrings {
   static const String about = "about";
   static const String storeDetails = "store_details";
   static const String changeLanguage = "change_language";
-  static const String contactUs = "contact_us";
   static const String inviteYourFriends = "invite_your_friends";
   static const String logout = "logout";
 

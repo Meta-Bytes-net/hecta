@@ -1,6 +1,8 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hecta/core/helpers/app_assets.dart';
+import 'package:hecta/core/helpers/app_strings.dart';
 import 'package:hecta/core/helpers/extensions/extensions.dart';
 import 'package:hecta/core/shared/presentation/widgets/base_content_widget.dart';
 import 'package:hecta/core/theming/app_colors.dart';
@@ -14,37 +16,38 @@ class MoreScreenContent extends StatelessWidget {
     // List of options with their corresponding icons.
     final List<_MoreOption> options = [
       _MoreOption(
-        title: 'تعديل الملف الشخصى',
+        title: AppStrings.editProfile.tr(),
         iconPath: Assets.imagesProfile,
         onTap: () {},
       ),
       _MoreOption(
-        title: 'تعديل كلمة المرور',
+        title: AppStrings.editPassword.tr(),
+
         iconPath: Assets.imagesSecurity,
         onTap: () {},
       ),
       _MoreOption(
-        title: 'اتصل بنا',
+        title: AppStrings.contactUs.tr(),
         iconPath: Assets.imagesChatIcon,
         onTap: () {},
       ),
       _MoreOption(
-        title: 'الباقات',
+        title: AppStrings.packages.tr(),
         iconPath: Assets.imagesServices,
         onTap: () {},
       ),
       _MoreOption(
-        title: 'عن التطبيق',
+        title: AppStrings.aboutApp.tr(),
         iconPath: Assets.imagesHectaIcon,
         onTap: () {},
       ),
       _MoreOption(
-        title: 'سياسة الخصوصية',
+        title: AppStrings.privacyPolicy.tr(),
         iconPath: Assets.imagesGeneralCleaning,
         onTap: () {},
       ),
       _MoreOption(
-        title: 'الشروط والأحكام',
+        title: AppStrings.termsAndConditions.tr(),
         iconPath: Assets.imagesMoreIcon,
         onTap: () {},
       ),
@@ -52,22 +55,13 @@ class MoreScreenContent extends StatelessWidget {
 
     return BaseContentWidget(
       bottomPadding: AppPadding.p20,
-      child: Column(
-        spacing: AppSize.s28.h,
-        children: [
-          _buildAvatar(context),
-          Container(
-            decoration: BoxDecoration(
-              color: AppColors.whiteColor,
-              borderRadius: BorderRadius.circular(AppSize.s12.r),
-            ),
-            child: ListView.separated(
-              shrinkWrap: true,
-              physics: const NeverScrollableScrollPhysics(),
-              itemCount: options.length,
-              separatorBuilder: (_, __) => const Divider(height: 1),
-              itemBuilder: (ctx, idx) => _MoreTile(option: options[idx]),
-            ),
+      child: CustomScrollView(
+        slivers: [
+          SliverToBoxAdapter(child: _buildAvatar(context)),
+          SliverList.separated(
+            itemBuilder: (ctx, idx) => _MoreTile(option: options[idx]),
+            separatorBuilder: (_, __) => const Divider(height: 1),
+            itemCount: options.length,
           ),
         ],
       ),
@@ -122,7 +116,7 @@ class _MoreTile extends StatelessWidget {
         size: AppSize.s28.sp,
       ),
       title: Text(option.title, style: context.textTheme.bodyMedium),
-      trailing: Icon(Icons.arrow_back_ios_new, color: AppColors),
+      trailing: Icon(Icons.arrow_forward_ios_rounded, color: AppColors.gray),
       onTap: option.onTap,
     );
   }
