@@ -1,6 +1,9 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:hecta/core/config/app_config.dart';
+import 'package:hecta/core/config/app_config_dev.dart';
 import 'package:hecta/core/di/injection.dart';
 import 'package:hecta/hecta_app.dart';
 import 'package:injectable/injectable.dart';
@@ -15,6 +18,9 @@ Future<void> main() async {
       systemNavigationBarColor: Colors.transparent,
     ),
   );
+  AppConfig.configure(DevelopmentConfig());
+
+  await ScreenUtil.ensureScreenSize();
   await configureDependencies(Environment.dev);
   await EasyLocalization.ensureInitialized();
 
