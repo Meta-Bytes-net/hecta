@@ -23,6 +23,8 @@ import 'package:hecta/features/more/presentation/cubit/more_cubit_cubit.dart'
     as _i225;
 import 'package:hecta/features/orders/presentation/cubit/orders_cubit.dart'
     as _i987;
+import 'package:hecta/features/profile/presentation/cubit/profile_cubit.dart'
+    as _i236;
 import 'package:injectable/injectable.dart' as _i526;
 
 extension GetItInjectableX on _i174.GetIt {
@@ -38,6 +40,7 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i487.HomeCubit>(() => _i487.HomeCubit());
     gh.factory<_i225.MoreCubitCubit>(() => _i225.MoreCubitCubit());
     gh.factory<_i987.OrdersCubit>(() => _i987.OrdersCubit());
+    gh.factory<_i236.ProfileCubit>(() => _i236.ProfileCubit());
     gh.singleton<_i27.AppRouter>(() => _i27.AppRouter());
     gh.lazySingleton<_i911.NetworkInfo>(() => dataModule.provideNetworkInfo());
     return this;

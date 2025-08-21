@@ -65,4 +65,5 @@ class DefaultFirebaseOptions {
     storageBucket: 'hecta-552ba.firebasestorage.app',
     iosBundleId: 'com.example.hecta',
   );
+
 }

@@ -1,9 +1,11 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hecta/core/helpers/app_assets.dart';
 import 'package:hecta/core/helpers/app_strings.dart';
 import 'package:hecta/core/helpers/extensions/extensions.dart';
+import 'package:hecta/core/routing/app_router.dart';
 import 'package:hecta/core/shared/presentation/widgets/base_content_widget.dart';
 import 'package:hecta/core/theming/app_colors.dart';
 import 'package:hecta/core/theming/app_sizes.dart';
@@ -18,7 +20,9 @@ class MoreScreenContent extends StatelessWidget {
       _MoreOption(
         title: AppStrings.editProfile.tr(),
         iconPath: Assets.imagesProfile,
-        onTap: () {},
+        onTap: () {
+          context.router.pushPath(Routers.editProfile);
+        },
       ),
       _MoreOption(
         title: AppStrings.editPassword.tr(),
