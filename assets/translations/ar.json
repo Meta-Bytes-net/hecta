@@ -111,4 +111,20 @@
   "cache_error": "خطأ في التخزين المؤقت",
   "no_internet_error": "لا يوجد اتصال بالإنترنت",
   "bad_request": "طلب غير صالح"
+  ,
+  "packages_title": "الباقات",
+  "package_hecta_king": "باقة هيكتا كينج",
+  "package_hecta_gold": "باقة هيكتا جولد",
+  "package_hecta_tower": "باقة هيكتا تاور",
+  "package_hecta_silver": "باقة هيكتا سيلفر",
+  "currency_aed": "درهم",
+  "price_format": "{price} {currency}",
+  "action_subscribe": "اشتراك",
+  "action_cancel": "إلغاء",
+  "action_request_report": "طلب تقرير",
+  "action_request_preview": "طلب معاينة",
+  "status_subscribed": "مشترك",
+  "status_not_subscribed": "غير مشترك",
+  "empty_packages": "لا توجد باقات متاحة",
+  "error_loading_packages": "حدث خطأ أثناء تحميل الباقات"
 }

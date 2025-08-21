@@ -122,4 +122,20 @@ class AppStrings {
   static const String noInternetError = "no_internet_error";
   static const String badRequest =
       "bad_request"; // todo handle localization to support many langs.
+  // Packages
+  static const String packagesTitle = 'packages_title';
+  static const String packageHectaKing = 'package_hecta_king';
+  static const String packageHectaGold = 'package_hecta_gold';
+  static const String packageHectaTower = 'package_hecta_tower';
+  static const String packageHectaSilver = 'package_hecta_silver';
+  static const String currencyAed = 'currency_aed';
+  static const String priceFormat = 'price_format';
+  static const String actionSubscribe = 'action_subscribe';
+  static const String actionCancel = 'action_cancel';
+  static const String actionRequestReport = 'action_request_report';
+  static const String actionRequestPreview = 'action_request_preview';
+  static const String statusSubscribed = 'status_subscribed';
+  static const String statusNotSubscribed = 'status_not_subscribed';
+  static const String emptyPackages = 'empty_packages';
+  static const String errorLoadingPackages = 'error_loading_packages';
 }
