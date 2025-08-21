@@ -38,7 +38,9 @@ class MoreScreenContent extends StatelessWidget {
       _MoreOption(
         title: AppStrings.packages.tr(),
         iconPath: Assets.imagesServices,
-        onTap: () {},
+        onTap: () {
+          context.router.pushPath(Routers.packages);
+        },
       ),
       _MoreOption(
         title: AppStrings.aboutApp.tr(),

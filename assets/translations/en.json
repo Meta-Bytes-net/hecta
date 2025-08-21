@@ -110,5 +110,20 @@
   "default_error": "Something went wrong",
   "cache_error": "Cache error",
   "no_internet_error": "No internet connection",
-  "bad_request": "Bad request"
+  "bad_request": "Bad request",
+  "packages_title": "Packages",
+  "package_hecta_king": "Hecta King",
+  "package_hecta_gold": "Hecta Gold",
+  "package_hecta_tower": "Hecta Tower",
+  "package_hecta_silver": "Hecta Silver",
+  "currency_aed": "AED",
+  "price_format": "{price} {currency}",
+  "action_subscribe": "Subscribe",
+  "action_cancel": "Cancel",
+  "action_request_report": "Request Report",
+  "action_request_preview": "Request Preview",
+  "status_subscribed": "Subscribed",
+  "status_not_subscribed": "Not Subscribed",
+  "empty_packages": "No packages available",
+  "error_loading_packages": "Failed to load packages"
 }
