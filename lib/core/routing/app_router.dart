@@ -23,6 +23,7 @@ final class AppRouter extends RootStackRouter {
 
     AutoRoute(path: Routers.mainLayout, page: MainLayout.page),
     AutoRoute(path: Routers.categoryDetails, page: CategoryDetailsRoute.page),
+    AutoRoute(path: Routers.editProfile, page: EditProfileRoute.page),
     AutoRoute(initial: true, path: Routers.splash, page: SplashRoute.page),
   ];
 }
@@ -34,6 +35,7 @@ final class Routers {
   static const String home = '/home';
   static const String categoryDetails = '/category-details/:categoryName';
   static const String mainLayout = '/main-layout';
+  static const String editProfile = '/edit-profile';
 
   static const String splash = '/splash';
 

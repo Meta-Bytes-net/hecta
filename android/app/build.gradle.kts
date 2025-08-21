@@ -52,6 +52,9 @@ android {
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_11.toString()
     }
+     buildFeatures {
+        buildConfig = true
+    }
   flavorDimensions += "environment"
 
 productFlavors {
@@ -60,17 +63,11 @@ productFlavors {
         applicationIdSuffix = ".dev" // 📱 com.example.myapp.dev
         versionNameSuffix = "-dev"   // 📊 1.0.0-dev
         resValue("string", "app_name", "Hecta Dev") // 📱 App name
-
-        // 🎨 Custom app icon for development
-        // Place dev icons in: android/app/src/development/res/
     }
 
     create("production") {
         dimension = "environment"
         resValue("string", "app_name", "Hecta") // 📱 Clean app name
-
-        // 🎨 Production app icon
-        // Use default icons in: android/app/src/main/res/
     }
 }
 
@@ -86,6 +83,7 @@ productFlavors {
     }
 
     buildTypes {
+
         release {
             // TODO: Add your own signing config for the release build.
             // Signing with the debug keys for now, so `flutter run --release` works.
