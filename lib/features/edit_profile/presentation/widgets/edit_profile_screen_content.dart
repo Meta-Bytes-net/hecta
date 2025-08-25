@@ -9,8 +9,8 @@ import 'package:hecta/core/shared/presentation/widgets/base_content_widget.dart'
 import 'package:hecta/core/shared/presentation/widgets/custom_text_form_field.dart';
 import 'package:hecta/core/theming/app_colors.dart';
 import 'package:hecta/core/theming/app_sizes.dart';
-import 'package:hecta/features/profile/presentation/cubit/profile_cubit.dart';
-import 'package:hecta/features/profile/presentation/cubit/profile_state.dart';
+import 'package:hecta/features/edit_profile/presentation/cubit/edit_profile_cubit.dart';
+import 'package:hecta/features/edit_profile/presentation/cubit/edit_profile_state.dart';
 
 class EditProfileScreenContent extends StatefulWidget {
   const EditProfileScreenContent({super.key});
@@ -40,7 +40,7 @@ class _EditProfileScreenContentState extends State<EditProfileScreenContent> {
       appBar: _buildAppBar(context),
       body: BaseContentWidget(
         bottomPadding: AppPadding.p20,
-        child: BlocListener<ProfileCubit, ProfileState>(
+        child: BlocListener<EditProfileCubit, EditProfileState>(
           listener: (context, state) {
             state.when(
               initial: () {},
@@ -200,7 +200,7 @@ class _EditProfileScreenContentState extends State<EditProfileScreenContent> {
   }
 
   Widget _buildSaveButton() {
-    return BlocBuilder<ProfileCubit, ProfileState>(
+    return BlocBuilder<EditProfileCubit, EditProfileState>(
       builder: (context, state) {
         final isLoading = state.maybeWhen(
           loading: () => true,
@@ -243,7 +243,7 @@ class _EditProfileScreenContentState extends State<EditProfileScreenContent> {
 
   void _handleSave() {
     if (_formKey.currentState?.validate() ?? false) {
-      context.read<ProfileCubit>().updateProfile(
+      context.read<EditProfileCubit>().updateProfile(
         name: _nameController.text.trim(),
         mobileNumber: _mobileController.text.trim(),
         email: _emailController.text.trim(),

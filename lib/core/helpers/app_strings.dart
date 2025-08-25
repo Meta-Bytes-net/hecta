@@ -106,6 +106,11 @@ class AppStrings {
   static const String changeLanguage = "change_language";
   static const String inviteYourFriends = "invite_your_friends";
   static const String logout = "logout";
+  static const String propertyCode = "property_code";
+  static const String propertyCodeRequired = "property_code_required";
+  static const String message = "message";
+  static const String messageRequired = "message_required";
+  static const String send = "send";
 
   // error handler
   static const String badRequestError = "bad_request_error";

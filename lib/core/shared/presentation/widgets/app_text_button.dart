@@ -13,7 +13,7 @@ class AppTextButton extends StatelessWidget {
   final double? buttonHeight;
   final String buttonText;
   final TextStyle? textStyle;
-  final VoidCallback onPressed;
+  final VoidCallback? onPressed;
   const AppTextButton({
     super.key,
     this.borderRadius,
@@ -31,8 +31,8 @@ class AppTextButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ButtonStyle(
-        shape: WidgetStateProperty.all<RoundedRectangleBorder>(
-          RoundedRectangleBorder(
+        shape: WidgetStateProperty.all<RoundedSuperellipseBorder>(
+          RoundedSuperellipseBorder(
             borderRadius: BorderRadius.circular(borderRadius ?? 16.0),
           ),
         ),
@@ -46,7 +46,7 @@ class AppTextButton extends StatelessWidget {
           ),
         ),
         fixedSize: WidgetStateProperty.all(
-          Size(buttonWidth?.w ?? double.maxFinite, buttonHeight ?? 50.h),
+          Size(buttonWidth?.w ?? double.maxFinite, buttonHeight ?? 45.h),
         ),
       ),
       onPressed: onPressed,
