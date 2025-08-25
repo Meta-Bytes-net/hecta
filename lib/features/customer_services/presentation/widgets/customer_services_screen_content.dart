@@ -21,17 +21,7 @@ class CustomerServicesScreenContent extends StatelessWidget {
           placeholder: CircularProgressIndicator.adaptive(),
           directChatLink:
               'https://tawk.to/chat/68a71eb3947aa219273a1cb6/1j36cvs02',
-          visitor: TawkVisitor(
-            name: visitorName,
-            email: visitorEmail,
-          ),
-        ),
-      ),
-    );
-  }
-}
-            email: visitorEmail,
-          ),
+          visitor: TawkVisitor(name: visitorName, email: visitorEmail),
         ),
       ),
     );
