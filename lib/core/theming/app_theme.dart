@@ -8,6 +8,7 @@ ThemeData getApplicationTheme() {
   return ThemeData(
     // main colors
     primaryColor: AppColors.mainBlue,
+    scaffoldBackgroundColor: AppColors.backgroundColor,
     // primaryColorLight: AppColors.lightPrimary,
     // primaryColorDark: AppColors.darkPrimary,
     // disabledColor: AppColors.blckColor,
@@ -133,7 +134,6 @@ ThemeData getApplicationTheme() {
     ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       backgroundColor: Colors.transparent,
-      
     ),
     // input decoration theme (text form field)
     inputDecorationTheme: InputDecorationTheme(

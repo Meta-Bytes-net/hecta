@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'profile_state.dart';
+part of 'edit_profile_state.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -12,7 +12,7 @@ part of 'profile_state.dart';
 // dart format off
 T _$identity<T>(T value) => value;
 /// @nodoc
-mixin _$ProfileState {
+mixin _$EditProfileState {
 
 
 
@@ -20,7 +20,7 @@ mixin _$ProfileState {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ProfileState);
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is EditProfileState);
 }
 
 
@@ -29,20 +29,20 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'ProfileState()';
+  return 'EditProfileState()';
 }
 
 
 }
 
 /// @nodoc
-class $ProfileStateCopyWith<$Res>  {
-$ProfileStateCopyWith(ProfileState _, $Res Function(ProfileState) __);
+class $EditProfileStateCopyWith<$Res>  {
+$EditProfileStateCopyWith(EditProfileState _, $Res Function(EditProfileState) __);
 }
 
 
-/// Adds pattern-matching-related methods to [ProfileState].
-extension ProfileStatePatterns on ProfileState {
+/// Adds pattern-matching-related methods to [EditProfileState].
+extension EditProfileStatePatterns on EditProfileState {
 /// A variant of `map` that fallback to returning `orElse`.
 ///
 /// It is equivalent to doing:
@@ -192,7 +192,7 @@ return error(_that.message);case _:
 /// @nodoc
 
 
-class _Initial implements ProfileState {
+class _Initial implements EditProfileState {
   const _Initial();
   
 
@@ -212,7 +212,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'ProfileState.initial()';
+  return 'EditProfileState.initial()';
 }
 
 
@@ -224,7 +224,7 @@ String toString() {
 /// @nodoc
 
 
-class _Loading implements ProfileState {
+class _Loading implements EditProfileState {
   const _Loading();
   
 
@@ -244,7 +244,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'ProfileState.loading()';
+  return 'EditProfileState.loading()';
 }
 
 
@@ -256,7 +256,7 @@ String toString() {
 /// @nodoc
 
 
-class _Success implements ProfileState {
+class _Success implements EditProfileState {
   const _Success();
   
 
@@ -276,7 +276,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'ProfileState.success()';
+  return 'EditProfileState.success()';
 }
 
 
@@ -288,13 +288,13 @@ String toString() {
 /// @nodoc
 
 
-class _Error implements ProfileState {
+class _Error implements EditProfileState {
   const _Error(this.message);
   
 
  final  String message;
 
-/// Create a copy of ProfileState
+/// Create a copy of EditProfileState
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
@@ -313,14 +313,14 @@ int get hashCode => Object.hash(runtimeType,message);
 
 @override
 String toString() {
-  return 'ProfileState.error(message: $message)';
+  return 'EditProfileState.error(message: $message)';
 }
 
 
 }
 
 /// @nodoc
-abstract mixin class _$ErrorCopyWith<$Res> implements $ProfileStateCopyWith<$Res> {
+abstract mixin class _$ErrorCopyWith<$Res> implements $EditProfileStateCopyWith<$Res> {
   factory _$ErrorCopyWith(_Error value, $Res Function(_Error) _then) = __$ErrorCopyWithImpl;
 @useResult
 $Res call({
@@ -339,7 +339,7 @@ class __$ErrorCopyWithImpl<$Res>
   final _Error _self;
   final $Res Function(_Error) _then;
 
-/// Create a copy of ProfileState
+/// Create a copy of EditProfileState
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') $Res call({Object? message = null,}) {
   return _then(_Error(

@@ -17,14 +17,18 @@ import 'package:hecta/features/auth/presentation/cubit/login_cubit.dart'
     as _i283;
 import 'package:hecta/features/category_details/presentation/cubit/category_details_cubit.dart'
     as _i504;
+import 'package:hecta/features/contact_us/presentation/cubit/contact_us_cubit.dart'
+    as _i998;
+import 'package:hecta/features/customer_services/presentation/cubit/customer_services_cubit.dart'
+    as _i121;
+import 'package:hecta/features/edit_profile/presentation/cubit/edit_profile_cubit.dart'
+    as _i82;
 import 'package:hecta/features/home/presentation/cubit/home_cubit.dart'
     as _i487;
 import 'package:hecta/features/more/presentation/cubit/more_cubit_cubit.dart'
     as _i225;
 import 'package:hecta/features/orders/presentation/cubit/orders_cubit.dart'
     as _i987;
-import 'package:hecta/features/profile/presentation/cubit/profile_cubit.dart'
-    as _i236;
 import 'package:injectable/injectable.dart' as _i526;
 
 extension GetItInjectableX on _i174.GetIt {
@@ -37,10 +41,14 @@ extension GetItInjectableX on _i174.GetIt {
     final dataModule = _$DataModule();
     gh.factory<_i283.LoginCubit>(() => _i283.LoginCubit());
     gh.factory<_i504.CategoryDetailsCubit>(() => _i504.CategoryDetailsCubit());
+    gh.factory<_i998.ContactUsCubit>(() => _i998.ContactUsCubit());
+    gh.factory<_i121.CustomerServicesCubit>(
+      () => _i121.CustomerServicesCubit(),
+    );
+    gh.factory<_i82.EditProfileCubit>(() => _i82.EditProfileCubit());
     gh.factory<_i487.HomeCubit>(() => _i487.HomeCubit());
     gh.factory<_i225.MoreCubitCubit>(() => _i225.MoreCubitCubit());
     gh.factory<_i987.OrdersCubit>(() => _i987.OrdersCubit());
-    gh.factory<_i236.ProfileCubit>(() => _i236.ProfileCubit());
     gh.singleton<_i27.AppRouter>(() => _i27.AppRouter());
     gh.lazySingleton<_i911.NetworkInfo>(() => dataModule.provideNetworkInfo());
     return this;

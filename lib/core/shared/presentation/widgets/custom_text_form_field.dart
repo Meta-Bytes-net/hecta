@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:hecta/core/helpers/extensions/extensions.dart';
 import 'package:hecta/core/theming/app_colors.dart';
 import 'package:hecta/core/theming/app_sizes.dart';
 
@@ -68,10 +69,9 @@ class CustomTextFormField extends StatelessWidget {
       ),
       decoration: InputDecoration(
         hintText: hintText,
-        hintStyle: TextStyle(
-          fontSize: 14.sp,
+        hintStyle: context.theme.textTheme.titleSmall!.copyWith(
           color: AppColors.lightGray,
-          fontWeight: FontWeight.w400,
+          
         ),
         prefixIcon: prefixIcon != null
             ? Padding(
@@ -100,7 +100,7 @@ class CustomTextFormField extends StatelessWidget {
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(borderRadius ?? AppSize.s12.r),
           borderSide: BorderSide(
-            color: borderColor ?? AppColors.gray,
+            color: borderColor ?? AppColors.lightGray,
             width: 1.5,
           ),
         ),

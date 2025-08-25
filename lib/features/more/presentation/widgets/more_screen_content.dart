@@ -19,7 +19,7 @@ class MoreScreenContent extends StatelessWidget {
     final List<_MoreOption> options = [
       _MoreOption(
         title: AppStrings.editProfile.tr(),
-        iconPath: Assets.imagesProfile,
+        icon: Icons.person_outline,
         onTap: () {
           context.router.pushPath(Routers.editProfile);
         },
@@ -27,34 +27,34 @@ class MoreScreenContent extends StatelessWidget {
       _MoreOption(
         title: AppStrings.editPassword.tr(),
 
-        iconPath: Assets.imagesSecurity,
+        icon: Icons.lock_outline,
         onTap: () {},
       ),
       _MoreOption(
         title: AppStrings.contactUs.tr(),
-        iconPath: Assets.imagesChatIcon,
-        onTap: () {},
+        icon: Icons.contact_support_outlined,
+        onTap: () => context.router.pushPath(Routers.contactUs),
       ),
       _MoreOption(
         title: AppStrings.packages.tr(),
-        iconPath: Assets.imagesServices,
+        icon: Icons.gradient_rounded,
         onTap: () {
           context.router.pushPath(Routers.packages);
         },
       ),
       _MoreOption(
         title: AppStrings.aboutApp.tr(),
-        iconPath: Assets.imagesHectaIcon,
+        icon: Icons.info_outline_rounded,
         onTap: () {},
       ),
       _MoreOption(
         title: AppStrings.privacyPolicy.tr(),
-        iconPath: Assets.imagesGeneralCleaning,
+        icon: Icons.gpp_maybe_outlined,
         onTap: () {},
       ),
       _MoreOption(
         title: AppStrings.termsAndConditions.tr(),
-        iconPath: Assets.imagesMoreIcon,
+        icon: Icons.assignment_outlined,
         onTap: () {},
       ),
     ];
@@ -65,7 +65,11 @@ class MoreScreenContent extends StatelessWidget {
         slivers: [
           SliverToBoxAdapter(child: _buildAvatar(context)),
           SliverList.separated(
-            itemBuilder: (ctx, idx) => _MoreTile(option: options[idx]),
+            itemBuilder: (ctx, idx) => _MoreTile(
+              option: options[idx],
+              isfirst: idx == 0,
+              islast: idx == options.length - 1,
+            ),
             separatorBuilder: (_, __) => const Divider(height: 1),
             itemCount: options.length,
           ),
@@ -75,11 +79,12 @@ class MoreScreenContent extends StatelessWidget {
   }
 
   Widget _buildAvatar(BuildContext context) {
-    final double avatarSize = context.screenWidth * 0.35;
+    final double avatarSize = context.screenWidth * 0.30;
     return Center(
       child: Container(
         width: avatarSize,
         height: avatarSize,
+        margin: EdgeInsets.only(bottom: AppMargin.m14.h),
         decoration: BoxDecoration(
           shape: BoxShape.rectangle,
           borderRadius: BorderRadius.circular(AppSize.s16.r),
@@ -96,32 +101,51 @@ class MoreScreenContent extends StatelessWidget {
 
 class _MoreOption {
   final String title;
-  final String iconPath;
+  final IconData icon;
   final VoidCallback onTap;
   const _MoreOption({
     required this.title,
-    required this.iconPath,
+    required this.icon,
     required this.onTap,
   });
 }
 
 class _MoreTile extends StatelessWidget {
   final _MoreOption option;
-  const _MoreTile({required this.option});
+  bool? isfirst;
+  bool? islast;
+  _MoreTile({required this.option, this.isfirst = false, this.islast = false});
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
+      tileColor: AppColors.whiteColor,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.only(
+          topLeft: isfirst == true
+              ? Radius.circular(AppSize.s16.r)
+              : Radius.zero,
+          topRight: isfirst == true
+              ? Radius.circular(AppSize.s16.r)
+              : Radius.zero,
+          bottomLeft: islast == true
+              ? Radius.circular(AppSize.s16.r)
+              : Radius.zero,
+          bottomRight: islast == true
+              ? Radius.circular(AppSize.s16.r)
+              : Radius.zero,
+        ),
+      ),
       contentPadding: EdgeInsets.symmetric(
         horizontal: AppPadding.p16.w,
         vertical: AppPadding.p8.h,
       ),
-      leading: ImageIcon(
-        AssetImage(option.iconPath),
+      leading: Icon(
+        option.icon,
         color: AppColors.mainBlue,
         size: AppSize.s28.sp,
       ),
-      title: Text(option.title, style: context.textTheme.bodyMedium),
+      title: Text(option.title, style: context.textTheme.titleMedium),
       trailing: Icon(Icons.arrow_forward_ios_rounded, color: AppColors.gray),
       onTap: option.onTap,
     );

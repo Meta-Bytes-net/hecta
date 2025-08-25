@@ -13,6 +13,8 @@ import 'package:hecta/features/home/presentation/screens/home_screen.dart';
 import 'package:hecta/features/more/presentation/screens/more_screen.dart';
 import 'package:hecta/features/orders/presentation/screens/orders_screen.dart';
 
+import 'customer_services/presentation/screens/customer_services_screen.dart';
+
 @RoutePage()
 class MainLayout extends StatefulWidget {
   const MainLayout({super.key});
@@ -39,17 +41,19 @@ class _MainLayoutState extends State<MainLayout> {
   final List<Widget> _pages = [
     HomeScreen(),
     OrdersScreen(),
-    const Center(child: Text('محتوى خدمة العملاء')),
+    CustomerServicesScreen(),
     MoreScreen(),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(
-        title: _titles[_selectedIndex].tr(),
-        centerTitle: true,
-      ),
+      appBar: _selectedIndex == 2
+          ? null
+          : CustomAppBar(
+              title: _titles[_selectedIndex].tr(),
+              centerTitle: true,
+            ),
       body: _pages[_selectedIndex],
       bottomNavigationBar: CurvedNavigationBar(
         backgroundColor: Colors.transparent,

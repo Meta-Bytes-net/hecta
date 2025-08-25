@@ -60,6 +60,7 @@ dependencies:
   google_fonts: ^6.3.0
   curved_navigation_bar: ^1.0.6
   firebase_core: ^4.0.0
+  flutter_tawkto: ^0.0.5
 
 dev_dependencies:
   build_runner: ^2.5.4
@@ -85,6 +86,11 @@ dev_dependencies:
 # The following section is specific to Flutter packages.
 flutter:
   assets:
+    # Apply transformer to a folder of SVGs
+    - path: assets/svgs/
+      transformers:
+        - package: vector_graphics_compiler
+
     - assets/images/
     - assets/fonts/
     - assets/translations/
