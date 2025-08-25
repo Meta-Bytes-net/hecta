@@ -112,8 +112,8 @@ class _MoreOption {
 
 class _MoreTile extends StatelessWidget {
   final _MoreOption option;
-  bool? isfirst;
-  bool? islast;
+  final bool isfirst;
+  final bool islast;
   _MoreTile({required this.option, this.isfirst = false, this.islast = false});
 
   @override
@@ -122,16 +122,16 @@ class _MoreTile extends StatelessWidget {
       tileColor: AppColors.whiteColor,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.only(
-          topLeft: isfirst == true
+          topLeft: isfirst
               ? Radius.circular(AppSize.s16.r)
               : Radius.zero,
-          topRight: isfirst == true
+          topRight: isfirst
               ? Radius.circular(AppSize.s16.r)
               : Radius.zero,
-          bottomLeft: islast == true
+          bottomLeft: islast
               ? Radius.circular(AppSize.s16.r)
               : Radius.zero,
-          bottomRight: islast == true
+          bottomRight: islast
               ? Radius.circular(AppSize.s16.r)
               : Radius.zero,
         ),

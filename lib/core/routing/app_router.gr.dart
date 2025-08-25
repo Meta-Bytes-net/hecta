@@ -22,7 +22,7 @@ import 'package:hecta/features/edit_profile/presentation/screens/edit_profile_sc
 import 'package:hecta/features/main_layout.dart' as _i5;
 import 'package:hecta/features/packages/presentation/pages/packages_screen.dart'
     as _i6;
-import 'package:hecta/features/splash/splash_screen.dart' as _i7;
+import 'package:hecta/features/splash/presentation/screens/splash_screen.dart' as _i7;
 
 /// generated route for
 /// [_i1.CategoryDetailsScreen]
